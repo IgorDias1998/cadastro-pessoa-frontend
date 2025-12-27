@@ -1,1 +1,46 @@
-<p>pessoas-list works!</p>
+<p-toast></p-toast>
+
+<div class="p-m-3">
+  <p-button label="Nova Pessoa" icon="pi pi-plus" (click)="novo()"></p-button>
+</div>
+
+<p-table [value]="pessoas" class="p-m-3">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Telefone</th>
+      <th>Data Nascimento</th>
+      <th>CEP</th>
+      <th>Logradouro</th>
+      <th>Bairro</th>
+      <th>Cidade</th>
+      <th>Estado</th>
+      <th>Número</th>
+      <th>Complemento</th>
+      <th>Ações</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-pessoa>
+    <tr>
+      <td>{{ pessoa.nome }}</td>
+      <td>{{ pessoa.email }}</td>
+      <td>{{ pessoa.telefone }}</td>
+      <td>{{ pessoa.dataNascimento | date:'dd/MM/yyyy' }}</td>
+      <td>{{ pessoa.endereco.cep }}</td>
+      <td>{{ pessoa.endereco.logradouro }}</td>
+      <td>{{ pessoa.endereco.bairro }}</td>
+      <td>{{ pessoa.endereco.cidade }}</td>
+      <td>{{ pessoa.endereco.estado }}</td>
+      <td>{{ pessoa.endereco.numero }}</td>
+      <td>{{ pessoa.endereco.complemento || '-' }}</td>
+      <td>
+        <button pButton icon="pi pi-pencil" class="p-button-rounded p-button-sm p-mr-1"
+          (click)="editar(pessoa.id)"></button>
+        <button pButton icon="pi pi-trash" class="p-button-rounded p-button-sm p-button-danger"
+          (click)="excluir(pessoa.id)"></button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
