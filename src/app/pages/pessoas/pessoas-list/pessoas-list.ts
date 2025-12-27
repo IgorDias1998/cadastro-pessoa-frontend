@@ -53,13 +53,19 @@ export class PessoasListComponent implements OnInit {
   }
 
   editar(id: string) {
+    console.log("Editando id:", id);
     this.router.navigate(['/pessoas/editar', id]);
   }
 
   excluir(id: string) {
-    this.service.excluir(id).subscribe(() => {
-      this.message.add({ severity: 'success', summary: 'Removido com sucesso' });
-      this.carregar();
+    this.service.excluir(id).subscribe({
+      next: () => {
+        this.message.add({ severity: 'success', summary: 'Excluído com sucesso' });
+        this.carregar();
+      },
+      error: () => {
+        this.message.add({ severity: 'error', summary: 'Erro ao excluir' });
+      }
     });
   }
 
