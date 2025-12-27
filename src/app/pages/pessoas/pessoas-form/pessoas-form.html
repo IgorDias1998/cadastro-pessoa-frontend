@@ -22,48 +22,48 @@
     <input id="telefone" pInputText formControlName="telefone" />
   </div>
 
-    <!-- agrupando o endereço -->
-    <div formGroupName="endereco" class="p-grid">
+<!-- agrupando o endereço -->
+<div formGroupName="endereco" class="p-grid">
 
-    <div class="p-field p-col-12 p-md-4">
-        <label for="cep">CEP</label>
-        <div style="display:flex; gap:0.5rem; align-items:center;">
-        <input id="cep" pInputText formControlName="cep" />
-        <button pButton icon="pi pi-search" (click)="buscarCep()"></button>
-        </div>
+  <div class="p-field p-col-12 p-md-4">
+    <label for="cep">CEP</label>
+    <div style="display:flex; gap:0.5rem; align-items:center;">
+      <input id="cep" pInputText formControlName="cep" />
+      <button pButton icon="pi pi-search" (click)="buscarCep()"></button>
     </div>
+  </div>
 
-    <div class="p-field p-col-12 p-md-4">
-        <label for="logradouro">Logradouro</label>
-        <input id="logradouro" pInputText formControlName="logradouro" />
-    </div>
+  <div class="p-field p-col-12 p-md-4">
+    <label for="logradouro">Logradouro</label>
+    <input id="logradouro" pInputText formControlName="logradouro" />
+  </div>
 
-    <div class="p-field p-col-12 p-md-4">
-        <label for="bairro">Bairro</label>
-        <input id="bairro" pInputText formControlName="bairro" />
-    </div>
+  <div class="p-field p-col-12 p-md-4">
+    <label for="bairro">Bairro</label>
+    <input id="bairro" pInputText formControlName="bairro" />
+  </div>
 
-    <div class="p-field p-col-12 p-md-4">
-        <label for="cidade">Cidade</label>
-        <input id="cidade" pInputText formControlName="cidade" />
-    </div>
+  <div class="p-field p-col-12 p-md-4">
+    <label for="cidade">Cidade</label>
+    <input id="cidade" pInputText formControlName="cidade" />
+  </div>
 
-    <div class="p-field p-col-12 p-md-4">
-        <label for="estado">Estado</label>
-        <input id="estado" pInputText formControlName="estado" />
-    </div>
+  <div class="p-field p-col-12 p-md-4">
+    <label for="estado">Estado</label>
+    <input id="estado" pInputText formControlName="estado" />
+  </div>
 
-    <div class="p-field p-col-12 p-md-4">
-        <label for="numero">Número</label>
-        <input id="numero" pInputText formControlName="numero" />
-    </div>
+  <div class="p-field p-col-12 p-md-4">
+    <label for="numero">Número</label>
+    <input id="numero" pInputText formControlName="numero" />
+  </div>
 
-    <div class="p-field p-col-12">
-        <label for="complemento">Complemento</label>
-        <input id="complemento" pInputText formControlName="complemento" />
-    </div>
+  <div class="p-field p-col-12">
+    <label for="complemento">Complemento</label>
+    <input id="complemento" pInputText formControlName="complemento" />
+  </div>
 
-    </div>
+</div>
 
   <div class="p-col-12">
     <p-button label="Salvar" (click)="salvar()"></p-button>
