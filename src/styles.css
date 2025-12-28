@@ -1,7 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
-body {
-  background-color: #ffffff; /* exemplo de azul escuro */
+/* ===== LAYOUT BASE ===== */
+
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-content {
+  display: flex;
+  justify-content: center;  
+  align-items: flex-start;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 160px); 
+}
+
+/* ===== CARD DO FORMULÁRIO ===== */
+
+.form-card {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* ===== FORMULÁRIO ===== */
+
+.form-card,
+.form-card label {
+  color: #000;
+}
+
+.form-card .p-inputtext,
+.form-card input {
+  background-color: #fff;
+  color: #020303;
+}
+
+.p-card {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.form-row label {
+  text-align: right;
+  font-weight: 600;
+  color: #000;
+}
+
+.form-row .p-inputtext {
+  width: 100%;
+  background: #fff;
+  color: #000;
 }

@@ -2,22 +2,22 @@
 
 <form [formGroup]="form" class="p-fluid p-formgrid p-grid p-m-3">
 
-  <div class="p-field p-col-12 p-md-6">
+  <div class="form-row">
     <label for="nome">Nome</label>
     <input id="nome" pInputText formControlName="nome" />
   </div>
 
-  <div class="p-field p-col-12 p-md-6">
+  <div class="form-row">
     <label for="email">Email</label>
     <input id="email" pInputText formControlName="email" />
   </div>
 
-  <div class="p-field p-col-12 p-md-6">
+  <div class="form-row">
     <label for="dataNascimento">Data Nascimento</label>
     <input id="dataNascimento" type="date" pInputText formControlName="dataNascimento" />
   </div>
 
-  <div class="p-field p-col-12 p-md-6">
+  <div class="form-row">
     <label for="telefone">Telefone</label>
     <input id="telefone" pInputText formControlName="telefone" />
   </div>
@@ -25,7 +25,7 @@
 <!-- agrupando o endereço -->
 <div formGroupName="endereco" class="p-grid">
 
-  <div class="p-field p-col-12 p-md-4">
+  <div class="form-row">
     <label for="cep">CEP</label>
     <div style="display:flex; gap:0.5rem; align-items:center;">
       <input id="cep" pInputText formControlName="cep" />
@@ -33,32 +33,32 @@
     </div>
   </div>
 
-  <div class="p-field p-col-12 p-md-4">
+  <div class="form-row">
     <label for="logradouro">Logradouro</label>
     <input id="logradouro" pInputText formControlName="logradouro" />
   </div>
 
-  <div class="p-field p-col-12 p-md-4">
+  <div class="form-row">
     <label for="bairro">Bairro</label>
     <input id="bairro" pInputText formControlName="bairro" />
   </div>
 
-  <div class="p-field p-col-12 p-md-4">
+  <div class="form-row">
     <label for="cidade">Cidade</label>
     <input id="cidade" pInputText formControlName="cidade" />
   </div>
 
-  <div class="p-field p-col-12 p-md-4">
+  <div class="form-row">
     <label for="estado">Estado</label>
     <input id="estado" pInputText formControlName="estado" />
   </div>
 
-  <div class="p-field p-col-12 p-md-4">
+  <div class="form-row">
     <label for="numero">Número</label>
     <input id="numero" pInputText formControlName="numero" />
   </div>
 
-  <div class="p-field p-col-12">
+  <div class="form-row">
     <label for="complemento">Complemento</label>
     <input id="complemento" pInputText formControlName="complemento" />
   </div>
