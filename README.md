@@ -1,59 +1,42 @@
 # CadastroPessoaFrontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.4.
+Este projeto foi criado utilizando [Angular CLI](https://github.com/angular/angular-cli) versão 21.0.4.
 
-## Development server
+## Como executar o projeto localmente
 
-To start a local development server, run:
+```bash
+npm install
+```
+
+Executar em modo desenvolvimento
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Acesse
 
 ```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
+http://localhost:4200
 ```
 
 ## Building
+O projeto tem como objetivo consumir a API .NET, ApiCadastroPessoa, repositório: https://github.com/IgorDias1998/ApiCadastroPessoa, que realiza um CRUD completo de um cadastro de pessoa.
+Os endpoints principais:
+GET /api/pessoas
 
-To build the project run:
+GET /api/pessoas/{id}
 
-```bash
-ng build
-```
+POST /api/pessoas
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+PUT /api/pessoas/{id}
 
-## Running unit tests
+DELETE /api/pessoas/{id}
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+GET /api/cep/{cep}
 
-```bash
-ng test
-```
+Rodando localmente a API pode ser configurada no service deste projeto:
+private readonly apiUrl = 'https://localhost:7032/api/pessoas';
 
-## Running end-to-end tests
+Por fim, este teste consistiu em um desafio pessoal de lidar com uma nova linguagem, foi de grande valor e aprendizado poder entender um pouco da estrutura para seguir estudando e me aprofundando neste assunto.
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
