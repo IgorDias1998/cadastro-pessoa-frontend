@@ -12,7 +12,7 @@ describe('PessoasFormComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        PessoasFormComponent,       // ✅ standalone component
+        PessoasFormComponent,     
         ReactiveFormsModule,
         HttpClientTestingModule,
         RouterTestingModule
